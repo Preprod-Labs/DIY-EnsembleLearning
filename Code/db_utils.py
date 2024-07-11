@@ -1,29 +1,28 @@
 # META DATA - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
     # Developer details: 
-        # Name: Vansh R
-        # Role: Architect
-        # Code ownership rights: Vansh R
+        # Name: Mohini T and Vansh R
+        # Role: Architects
+        # Code ownership rights: Mohini T and Vansh R
     # Version:
-        # Version: V 1.0 (29 July 2024)
-            # Developer: Vansh R
+        # Version: V 1.0 (11 July 2024)
+            # Developers: Mohini T and Vansh R
             # Unit test: Pass
             # Integration test: Pass
      
-    # Description: This script contains functions to read a YAML configuration file, connect to PostgreSQL and Cassandra databases, create tables in both databases, and insert data into these tables. The functions utilize SQLAlchemy for PostgreSQL connections and the Cassandra driver for Cassandra connections.
+    # Description: This code snippet contains utility functions to connect to PostgreSQL and Cassandra databases,
+    # create tables, and insert data into them.
         # PostgreSQL: Yes
         # Cassandra: Yes
-        # MQs: No
-        # Cloud: No
-        # Data versioning: No
-        # Data masking: No
+        # Redis: Yes
 
 # CODE - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-# Dependency: 
-    # Environment:     
-        # SQLAlchemy: 2.0.31
-        # Cassandra-driver: 3.29.1
+    # Dependency: 
+        # Environment:
+            # Python 3.11.5   
+            # SQLAlchemy 2.0.31
+            # Cassandra-driver 3.29.1
 
 from sqlalchemy import create_engine, MetaData, Table, Column, Integer, String, Float, Boolean, Date
 from cassandra.cluster import Cluster

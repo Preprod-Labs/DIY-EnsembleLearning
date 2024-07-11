@@ -1,33 +1,31 @@
 # META DATA - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
     # Developer details: 
-        # Name: Vansh R
-        # Role: Architect
-        # Code ownership rights: Vansh R
+        # Name: Mohini T and Vansh R
+        # Role: Architects
+        # Code ownership rights: Mohini T and Vansh R
     # Version:
-        # Version: V 1.0 (29 July 2024)
-            # Developer: Vansh R
+        # Version: V 1.0 (11 July 2024)
+            # Developers: Mohini T and Vansh R
             # Unit test: Pass
             # Integration test: Pass
      
-    # Description: This script preprocesses input data for prediction by converting dates to features, encoding categorical variables, and ensuring numerical types are correct. It then loads a pre-trained model from a pickle file, makes a prediction based on the input data, and returns the prediction. The if __name__ == "__main__": block provides an example of how to use the script with sample input data.
+    # Description: This code snippet preprocesses input data for a machine learning model by scaling numerical
+    # columns, encoding categorical columns, and extracting date components for further analysis.
         # PostgreSQL: Yes
         # Cassandra: Yes
-        # MQs: No
-        # Cloud: No
-        # Data versioning: No
-        # Data masking: No
 
 # CODE - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-# Dependency: 
-    # Environment:     
-        # Pandas: 2.2.2
-        # Scikit-learn: 1.5.0
+    # Dependency: 
+        # Environment:
+            # Python 3.11.5     
+            # Pandas 2.2.2
+            # Scikit-learn 1.5.0
 
-import pandas as pd
-import pickle
-from sklearn.preprocessing import StandardScaler, LabelEncoder
+import pandas as pd                                             # For data manipulation
+import pickle                                                   # For loading the model from a pickle file
+from sklearn.preprocessing import StandardScaler, LabelEncoder  # For preprocessing input data
 
 def preprocess_input_data(signup_date, last_login, annual_fee, subscription_type, payment_method,
                           account_age, number_of_logins, total_spent, num_tickets_raised, avg_response_time,

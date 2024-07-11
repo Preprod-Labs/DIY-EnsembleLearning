@@ -1,27 +1,24 @@
 # META DATA - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
     # Developer details: 
-        # Name: Vansh R
-        # Role: Architect
-        # Code ownership rights: Vansh R
+        # Name: Mohini T and Vansh R
+        # Role: Architects
+        # Code ownership rights: Mohini T and Vansh R
     # Version:
-        # Version: V 1.0 (29 July 2024)
-            # Developer: Vansh R
+        # Version: V 1.0 (11 July 2024)
+            # Developers: Mohini T and Vansh R
             # Unit test: Pass
             # Integration test: Pass
      
-    # Description: This script builds a Streamlit web application for churn prediction. It includes functionalities for data ingestion, preprocessing, model training, evaluation, and prediction, organized into tabs for “Model Training” and “Model Prediction”. The application allows users to train a churn prediction model and then use the trained model to predict churn
-        # Streamlit: Yes
-        # MQs: No
-        # Cloud: No
-        # Data versioning: No
-        # Data masking: No
+    # Description: This code snippet creates a web app using Streamlit to train, evaluate, and predict churn using
+    # three different ensemble models: Bagging, Voting Classifier, and Stacking Classifier.
 
 # CODE - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-# Dependency: 
-    # Environment:     
-        #Streamlit: 1.36.0
+    # Dependency: 
+        # Environment:     
+            # Python 3.11.5
+            # Streamlit 1.36.0
 
 import streamlit as st  # Used for creating the web app
 import datetime  # Used for setting default value in streamlit form

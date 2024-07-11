@@ -1,33 +1,38 @@
 # META DATA - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
     # Developer details: 
-        # Name: Vansh R
-        # Role: Architect
-        # Code ownership rights: Vansh R
+        # Name: Mohini T and Vansh R
+        # Role: Architects
+        # Code ownership rights: Mohini T and Vansh R
     # Version:
-        # Version: V 2.0 (11 July 2024)
-            # Developer: Vansh R and Mohini T
+        # Version: V 1.0 (11 July 2024)
+            # Developers: Mohini T and Vansh R
             # Unit test: Pass
             # Integration test: Pass
      
-    # Description: This script connects to a Redis database to load training data, performs hyperparameter tuning on a VotingClassifier using GridSearchCV, evaluates the best model, and saves it to a file.
+    # Description: This script connects to a Redis database to load training data, performs hyperparameter tuning on a
+    # VotingClassifier using GridSearchCV, evaluates the best model, and saves it to a file.
+        # Redis: Yes
 
 # CODE - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-# Dependency: 
-    # Environment:     
-        # Redis: 5.0.7
-        # Pandas: 2.2.2
-        # Scikit-learn: 1.5.0
+    # Dependency: 
+        # Environment:     
+            # Python 3.11.5
+            # Pandas 2.2.2
+            # Scikit-learn 1.5.0
 
-import redis
-import pickle
-import pandas as pd
-from sklearn.ensemble import VotingClassifier, RandomForestClassifier, GradientBoostingClassifier
-from sklearn.linear_model import LogisticRegression
-from sklearn.svm import SVC
-from sklearn.model_selection import GridSearchCV
-from sklearn.metrics import accuracy_score
+import redis                                        # For connecting to Redis database
+import pickle                                       # For loading and saving the model, and serializing and deserializing data
+import pandas as pd                                 # For data manipulation
+from sklearn.ensemble import (
+    VotingClassifier,
+    RandomForestClassifier,
+    GradientBoostingClassifier)                     # For creating the VotingClassifier
+from sklearn.linear_model import LogisticRegression # For creating the LogisticRegression classifier
+from sklearn.svm import SVC                         # For creating the SVC classifier
+from sklearn.model_selection import GridSearchCV    # For hyperparameter tuning
+from sklearn.metrics import accuracy_score          # For evaluating the model
 
 def read_training_data(r):
     # Load the training features data from Redis and deserialize it

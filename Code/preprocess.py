@@ -1,33 +1,31 @@
 # META DATA - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
     # Developer details: 
-        # Name: Vansh R
-        # Role: Architect
-        # Code ownership rights: Vansh R
+        # Name: Mohini T and Vansh R
+        # Role: Architects
+        # Code ownership rights: Mohini T and Vansh R
     # Version:
-        # Version: V 1.0 (29 July 2024)
-            # Developer: Vansh R
+        # Version: V 1.0 (11 July 2024)
+            # Developers: Mohini T and Vansh R
             # Unit test: Pass
             # Integration test: Pass
      
-    # Description: This script loads customer data from PostgreSQL and Cassandra databases, preprocesses it by scaling numerical columns and encoding categorical columns, and extracts date components for further analysis.
+    # Description: This code snippet contains utility functions to evaluate a model using test, validation,
+    # and super validation data stored in a Redis database.
         # PostgreSQL: Yes
         # Cassandra: Yes
-        # MQs: No
-        # Cloud: No
-        # Data versioning: No
-        # Data masking: No
 
 # CODE - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-# Dependency: 
-    # Environment:     
-        # Pandas: 2.2.2
-        # Scikit-learn: 1.5.0
+    # Dependency: 
+        # Environment:     
+            # Python 3.11.5
+            # Pandas 2.2.2
+            # Scikit-learn 1.5.0
 
-import pandas as pd # Importing pandas for data manipulation
-from sklearn.preprocessing import StandardScaler, LabelEncoder # Importing tools for data preprocessing
-import db_utils # Importing utility functions for database operations
+import pandas as pd                                             # Importing pandas for data manipulation
+from sklearn.preprocessing import StandardScaler, LabelEncoder  # Importing tools for data preprocessing
+import db_utils                                                 # Importing utility functions for database operations
 
 def preprocess_postgres_data(data):
     # Separate customer_id

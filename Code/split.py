@@ -1,37 +1,33 @@
 # META DATA - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
     # Developer details: 
-        # Name: Vansh R
-        # Role: Architect
-        # Code ownership rights: Vansh R
+        # Name: Mohini T and Vansh R
+        # Role: Architects
+        # Code ownership rights: Mohini T and Vansh R
     # Version:
-        # Version: V 1.0 (29 July 2024)
-            # Developer: Vansh R
+        # Version: V 1.0 (11 July 2024)
+            # Developers: Mohini T and Vansh R
             # Unit test: Pass
             # Integration test: Pass
      
-    # Description: This script reads configuration, connects to databases, loads and preprocesses data, merges and splits it into train, test, validation, and super validation sets, and stores the splits in Redis for quick access.
+    # Description: This code snippet preprocesses input data for a machine learning model by scaling
+    # numerical columns, encoding categorical columns, and extracting date components for further analysis.
         # Redis: Yes
-        # MQs: No
-        # Cloud: No
-        # Data versioning: No
-        # Data masking: No
 
 # CODE - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-# Dependency: 
-    # Environment:     
-        # Redis: 5.0.7
-        # Pandas: 2.2.2
-        # Scikit-learn: 1.5.0
+    # Dependency: 
+        # Environment:     
+            # Python 3.11.5
+            # Pandas 2.2.2
+            # Scikit-learn 1.5.0
 
-# Import necessary libraries
-import pandas as pd  # For data manipulation
-from sklearn.model_selection import train_test_split  # To split data into train, test, validation, and super validation sets
-import redis  # For using Redis as a cache to store the split data
-import pickle  # For serializing and deserializing data for storage in Redis
+import pandas as pd                                     # For data manipulation
+from sklearn.model_selection import train_test_split    # To split data into train, test, validation, and super validation sets
+import redis                                            # For using Redis as a cache to store the split data
+import pickle                                           # For serializing and deserializing data for storage in Redis
 
-# Helper functions
+# Importing necessary .py files and functions
 from preprocess import load_and_preprocess_data # For preprocessing data
 
 def connect_to_redis(host, port, db):

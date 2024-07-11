@@ -1,37 +1,32 @@
 # META DATA - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
     # Developer details: 
-        # Name: Vansh R
-        # Role: Architect
-        # Code ownership rights: Vansh R
+        # Name: Mohini T and Vansh R
+        # Role: Architects
+        # Code ownership rights: Mohini T and Vansh R
     # Version:
-        # Version: V 1.0 (29 July 2024)
-            # Developer: Vansh R
+        # Version: V 1.0 (11 July 2024)
+            # Developers: Mohini T and Vansh R
             # Unit test: Pass
             # Integration test: Pass
      
-    # Description: This script connects to a Redis database to load training data, performs hyperparameter tuning on a RandomForestClassifier using GridSearchCV, evaluates the best model, and saves it to a file.
+    # Description: This code snippet trains a BaggingClassifier model using the training data stored in a Redis database.
         # Redis: Yes
-        # PostgreSQL: Yes
-        # Cassandra: Yes
-        # Cloud: No
-        # Data versioning: No
-        # Data masking: No
 
 # CODE - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-# Dependency: 
-    # Environment:     
-        # Redis: 5.0.7
-        # Pandas: 2.2.2
-        # Scikit-learn: 1.5.0
+    # Dependency: 
+        # Environment:     
+            # Python 3.11.5
+            # Pandas 2.2.2
+            # Scikit-learn 1.5.0
 
-import redis
-import pickle
-import pandas as pd
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.model_selection import GridSearchCV
-from sklearn.metrics import accuracy_score
+import redis                                        # For connecting to Redis database
+import pickle                                       # For serializing and deserializing data for storage in Redis
+import pandas as pd                                 # For data manipulation
+from sklearn.ensemble import RandomForestClassifier # For creating the BaggingClassifier
+from sklearn.model_selection import GridSearchCV    # For hyperparameter tuning
+from sklearn.metrics import accuracy_score          # For evaluating the model
 
 def read_training_data(r):
     # Load the training features data from Redis and deserialize it

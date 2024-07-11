@@ -1,28 +1,26 @@
 # META DATA - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
     # Developer details: 
-        # Name: Vansh R
-        # Role: Architect
-        # Code ownership rights: Vansh R
+        # Name: Mohini T and Vansh R
+        # Role: Architects
+        # Code ownership rights: Mohini T and Vansh R
     # Version:
-        # Version: V 1.0 (29 July 2024)
-            # Developer: Vansh R
+        # Version: V 1.0 (11 July 2024)
+            # Developers: Mohini T and Vansh R
             # Unit test: Pass
             # Integration test: Pass
      
-    # Description: This script ingests data from a CSV file into PostgreSQL and Cassandra databases. It reads the data from the CSV file, preprocesses it, and then inserts it into the respective databases. The data is split into two parts: one for PostgreSQL and the other for Cassandra. The Cassandra data is preprocessed to convert date strings to datetime objects before insertion.
+    # Description: This code snippet ingests customer data from a CSV file, preprocesses it, and stores it in
+    # PostgreSQL and Cassandra databases.
+        # PostgreSQL: Yes 
         # Cassandra: Yes
-        # PostgreSQL: Yes
-        # MQs: No
-        # Cloud: No
-        # Data versioning: No
-        # Data masking: No
 
 # CODE - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-# Dependency: 
-    # Environment:     
-        # Pandas: 2.2.2
+    # Dependency: 
+        # Environment:     
+            # Python 3.11.5
+            # Pandas 2.2.2
 
 import pandas as pd # Importing pandas for data manipulation
 import db_utils # Importing utility functions for database operations

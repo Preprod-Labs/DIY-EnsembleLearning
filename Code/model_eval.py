@@ -1,28 +1,32 @@
-# META DATA - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+# META DATA - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
     # Developer details: 
-        # Name: Vansh R
-        # Role: Architect
-        # Code ownership rights: Vansh R
+        # Name: Mohini T and Vansh R
+        # Role: Architects
+        # Code ownership rights: Mohini T and Vansh R
     # Version:
-        # Version: V 1.0 (29 July 2024)
-            # Developer: Vansh R
+        # Version: V 1.0 (11 July 2024)
+            # Developers: Mohini T and Vansh R
             # Unit test: Pass
             # Integration test: Pass
      
+    # Description: This code snippet contains utility functions to evaluate a model using test, validation,
+    # and super validation data stored in a Redis database.
+        # Redis: Yes
+     
 # CODE - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-# Dependency: 
-    # Environment:     
-        # Redis: 5.0.7
-        # Pandas: 2.2.2
-        # Scikit-learn: 1.5.0
+    # Dependency: 
+        # Environment:
+            # Python 3.11.5   
+            # Pandas 2.2.2
+            # Scikit-learn 1.5.0
 
 # Import necessary libraries
-import redis
-import pickle
-import pandas as pd
-from sklearn.metrics import accuracy_score, classification_report, roc_auc_score, confusion_matrix
+import redis # For connecting to Redis database
+import pickle # For loading the model from a pickle file
+import pandas as pd # For data manipulation
+from sklearn.metrics import accuracy_score, classification_report, roc_auc_score, confusion_matrix # For model evaluation
 
 def load_data_from_redis(r, key):
     # Load and deserialize data from Redis using the provided key
