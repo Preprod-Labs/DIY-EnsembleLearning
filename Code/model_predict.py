@@ -121,26 +121,3 @@ def predict_output(signup_date, last_login, annual_fee, subscription_type, payme
     except Exception as e:
         print("Error during prediction:", e)  # Print any error that occurs
         return None
-
-if __name__ == "__main__":
-    # Example input data
-    signup_date = '2023-06-30'
-    last_login = '2023-07-15'
-    annual_fee = 29.99
-    subscription_type = 'Premium'
-    payment_method = 'CreditCard'
-    account_age = 3
-    number_of_logins = 2
-    total_spent = 60
-    num_tickets_raised = 100
-    avg_response_time = 10
-    satisfaction_score = 4
-    country = 'USA'
-    device = 'Desktop'
-    usage_hours_per_month = 1
-    
-    # Predict output using the input data
-    prediction = predict_output(signup_date, last_login, annual_fee, subscription_type, payment_method,
-                                account_age, number_of_logins, total_spent, num_tickets_raised, avg_response_time,
-                                satisfaction_score, country, device, usage_hours_per_month)
-    print(prediction)  # Print the prediction

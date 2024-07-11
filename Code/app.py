@@ -46,7 +46,7 @@ st.divider()
 
 # PostgreSQL 
 if "postgres_username" not in st.session_state:
-    st.session_state.postgres_username = "Vansh"
+    st.session_state.postgres_username = "User"
     
 if "postgres_password" not in st.session_state:
     st.session_state.postgres_password = "password"

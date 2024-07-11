@@ -104,6 +104,3 @@ def evaluate_model(redis_host, redis_port, redis_db, model_path):
     
     # Return evaluation metrics for test, validation, and super validation data
     return test_accuracy, test_roc_auc, test_confusion_matrix, test_classification_report, val_accuracy, val_roc_auc, val_confusion_matrix, val_classification_report, superval_accuracy, superval_roc_auc, superval_confusion_matrix, superval_classification_report
-
-if __name__ == "__main__":
-    test_accuracy, test_roc_auc, test_confusion_matrix, test_classification_report, val_accuracy, val_roc_auc, val_confusion_matrix, val_classification_report, superval_accuracy, superval_roc_auc, superval_confusion_matrix, superval_classification_report = evaluate_model('localhost', 6379, 1, 'bagging_model.pkl')

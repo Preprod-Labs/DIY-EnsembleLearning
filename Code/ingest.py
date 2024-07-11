@@ -54,6 +54,3 @@ def ingest_data(data_path, postgres_username, postgres_password, postgres_host, 
     # Insert data into PostgreSQL and Cassandra
     db_utils.insert_data_to_postgresql(postgres_data, 'customer_data', postgres_engine)
     db_utils.insert_data_to_cassandra(cassandra_data_processed, cassandra_session, 'customer_data')
-
-if __name__ == "__main__":
-    ingest_data("Data/Master/Mock_Data.csv", "Vansh", "password", "localhost", "5432", "churn_prediction", "localhost", "9042", "churn_prediction") # Run data ingestion process

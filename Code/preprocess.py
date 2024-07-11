@@ -124,6 +124,3 @@ def load_and_preprocess_data(postgres_username, postgres_password, postgres_host
     data_cassandra_processed = preprocess_cassandra_data(data_cassandra) # Preprocess Cassandra data
 
     return data_postgres_processed, data_cassandra_processed
-
-if __name__ == "__main__":
-    load_and_preprocess_data("Vansh", "password", "localhost", "5432", "churn_prediction", "localhost", "9042", "churn_prediction") # Execute the main function

@@ -140,7 +140,3 @@ def train_model(redis_host, redis_port, redis_db, model_path):
     
     # Return the training accuracy
     return train_accuracy, best_params
-
-# If this script is run as the main program, execute the train_model function
-if __name__ == "__main__":
-    train_model('localhost', 6379, 1, "stacking_classifier_model.pkl")

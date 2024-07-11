@@ -103,6 +103,3 @@ def split_data(redis_host, redis_port, redis_db, data_postgres_processed, data_c
     save_split_data(r, X_train, y_train, X_test, y_test, X_val, y_val, X_superval, y_superval)
     
     print('Data preprocessed, and split successfully!')
-
-if __name__ == "__main__":
-    split_data("localhost", 6379, 1, "Vansh", "password", "localhost", "5432", "churn_prediction", "localhost", "9042", "churn_prediction")
