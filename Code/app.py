@@ -96,7 +96,7 @@ if "voting_model_path" not in st.session_state:
 if "stacking_model_path" not in st.session_state:
     st.session_state.stacking_model_path = "stacking_classifier_model.pkl"
 
-# Creating two tabs for the web app: "Model Training" and "Model Prediction"
+# Creating tabs for the web app.
 tab1, tab2, tab3, tab4 = st.tabs(["Model Config","Model Training","Model Evaluation", "Model Prediction"])
 
 # Tab for Model Config
