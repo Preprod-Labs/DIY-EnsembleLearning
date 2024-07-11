@@ -2,4 +2,4 @@
 
 This is the main branch of DIY-EnsembleLearning.
 
-Please switch to Enselble-Learning branch to view the codes.
+Please switch to Ensemble-Learning branch to view the codes.
